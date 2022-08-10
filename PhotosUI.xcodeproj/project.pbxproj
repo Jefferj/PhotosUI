@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18141A77284EBC5E00B47C0A /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = 18141A76284EBC5E00B47C0A /* CodeScanner */; };
+		186DB299284AB37700335625 /* QRView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186DB298284AB37700335625 /* QRView.swift */; };
+		186DB29B284AB39E00335625 /* ScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186DB29A284AB39E00335625 /* ScannerView.swift */; };
+		186DB29D284AB3CF00335625 /* Scanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186DB29C284AB3CF00335625 /* Scanner.swift */; };
+		186DB29F284AB43700335625 /* ScanData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186DB29E284AB43700335625 /* ScanData.swift */; };
+		186DB2A1284AB46800335625 /* TextRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186DB2A0284AB46800335625 /* TextRecognizer.swift */; };
 		18F688C92849746600FB85D4 /* PhotosUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F688C82849746600FB85D4 /* PhotosUIApp.swift */; };
 		18F688CB2849746600FB85D4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F688CA2849746600FB85D4 /* ContentView.swift */; };
 		18F688CD2849746900FB85D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18F688CC2849746900FB85D4 /* Assets.xcassets */; };
@@ -14,6 +20,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		186DB298284AB37700335625 /* QRView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRView.swift; sourceTree = "<group>"; };
+		186DB29A284AB39E00335625 /* ScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerView.swift; sourceTree = "<group>"; };
+		186DB29C284AB3CF00335625 /* Scanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scanner.swift; sourceTree = "<group>"; };
+		186DB29E284AB43700335625 /* ScanData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanData.swift; sourceTree = "<group>"; };
+		186DB2A0284AB46800335625 /* TextRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextRecognizer.swift; sourceTree = "<group>"; };
 		18F688C52849746600FB85D4 /* PhotosUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotosUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18F688C82849746600FB85D4 /* PhotosUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosUIApp.swift; sourceTree = "<group>"; };
 		18F688CA2849746600FB85D4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -26,12 +37,32 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18141A77284EBC5E00B47C0A /* CodeScanner in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		186DB296284AB34800335625 /* ScanText */ = {
+			isa = PBXGroup;
+			children = (
+				186DB29A284AB39E00335625 /* ScannerView.swift */,
+				186DB29C284AB3CF00335625 /* Scanner.swift */,
+				186DB29E284AB43700335625 /* ScanData.swift */,
+				186DB2A0284AB46800335625 /* TextRecognizer.swift */,
+			);
+			path = ScanText;
+			sourceTree = "<group>";
+		};
+		186DB297284AB35200335625 /* QR */ = {
+			isa = PBXGroup;
+			children = (
+				186DB298284AB37700335625 /* QRView.swift */,
+			);
+			path = QR;
+			sourceTree = "<group>";
+		};
 		18F688BC2849746600FB85D4 = {
 			isa = PBXGroup;
 			children = (
@@ -51,6 +82,8 @@
 		18F688C72849746600FB85D4 /* PhotosUI */ = {
 			isa = PBXGroup;
 			children = (
+				186DB297284AB35200335625 /* QR */,
+				186DB296284AB34800335625 /* ScanText */,
 				18F688C82849746600FB85D4 /* PhotosUIApp.swift */,
 				18F688CA2849746600FB85D4 /* ContentView.swift */,
 				18F688CC2849746900FB85D4 /* Assets.xcassets */,
@@ -83,6 +116,9 @@
 			dependencies = (
 			);
 			name = PhotosUI;
+			packageProductDependencies = (
+				18141A76284EBC5E00B47C0A /* CodeScanner */,
+			);
 			productName = PhotosUI;
 			productReference = 18F688C52849746600FB85D4 /* PhotosUI.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +147,9 @@
 				Base,
 			);
 			mainGroup = 18F688BC2849746600FB85D4;
+			packageReferences = (
+				18141A75284EBC5E00B47C0A /* XCRemoteSwiftPackageReference "CodeScanner" */,
+			);
 			productRefGroup = 18F688C62849746600FB85D4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,6 +177,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				18F688CB2849746600FB85D4 /* ContentView.swift in Sources */,
+				186DB29B284AB39E00335625 /* ScannerView.swift in Sources */,
+				186DB29F284AB43700335625 /* ScanData.swift in Sources */,
+				186DB299284AB37700335625 /* QRView.swift in Sources */,
+				186DB29D284AB3CF00335625 /* Scanner.swift in Sources */,
+				186DB2A1284AB46800335625 /* TextRecognizer.swift in Sources */,
 				18F688C92849746600FB85D4 /* PhotosUIApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -272,10 +316,10 @@
 				DEVELOPMENT_TEAM = 45Y77HXG9H;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Cam view";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -302,10 +346,10 @@
 				DEVELOPMENT_TEAM = 45Y77HXG9H;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Cam view";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -343,6 +387,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		18141A75284EBC5E00B47C0A /* XCRemoteSwiftPackageReference "CodeScanner" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/twostraws/CodeScanner";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		18141A76284EBC5E00B47C0A /* CodeScanner */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 18141A75284EBC5E00B47C0A /* XCRemoteSwiftPackageReference "CodeScanner" */;
+			productName = CodeScanner;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 18F688BD2849746600FB85D4 /* Project object */;
 }

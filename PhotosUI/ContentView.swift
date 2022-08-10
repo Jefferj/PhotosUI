@@ -9,13 +9,13 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
-    }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
+        TabView{
+            ScannerView().tabItem{
+                Label("Scan Text", systemImage: "doc.text.viewfinder")
+            }
+            QRView().tabItem{
+                Label("QR Code", systemImage: "qrcode.viewfinder")
+            }
+        }
     }
 }
